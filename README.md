@@ -2,8 +2,8 @@
 ## Team ID: B21-CAP0489
 
 Active Member ID and Name:
-1. A3363002 – Alfian
-2. A3262922 - Badria Mujki
+1. A3262922 - Badria Mujki
+2. A3363002 – Alfian
 3. M0121217 - Carlo Anthony Balelang
 4. M0121218 - Rashad Abul Khayr
 5. C3352999 - Farhan Dasyandra Larenzo
