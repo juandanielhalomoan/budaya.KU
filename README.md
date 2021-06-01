@@ -1,4 +1,5 @@
-Team ID: B21-CAP0489
+## Hi There
+## Team ID: B21-CAP0489
 
 Active Member ID and Name:
 1. A3363002 – Alfian
@@ -7,6 +8,8 @@ Active Member ID and Name:
 4. M0121218 - Rashad Abul Khayr
 5. C3353000 – Juan Daniel Halomoan
 6. C3352999 - Farhan Dasyandra Larenzo
+<br />
+<br />
 
 Inactive Member ID and Name:
 1. -
@@ -32,6 +35,7 @@ Project Scope
 7.make application desain, hosting application web and mobile
 8.creates a system interactive
 
+FlowChart
 ![flowchart budaya ku](https://user-images.githubusercontent.com/47490009/120312544-0fa93e00-c303-11eb-99f3-a8556ce69ea5.png)
 
 
