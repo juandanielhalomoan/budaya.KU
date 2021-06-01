@@ -36,8 +36,9 @@ Project Scope
 8.creates a system interactive
 
 FlowChart
+<br />
 ![flowchart budaya ku](https://user-images.githubusercontent.com/47490009/120312544-0fa93e00-c303-11eb-99f3-a8556ce69ea5.png)
-
+<br />
 
 Project Resources:
 The budget: GCP:$200
