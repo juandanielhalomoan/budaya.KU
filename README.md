@@ -6,8 +6,8 @@ Active Member ID and Name:
 2. A3262922 - Badria Mujki
 3. M0121217 - Carlo Anthony Balelang
 4. M0121218 - Rashad Abul Khayr
-5. C3353000 – Juan Daniel Halomoan
-6. C3352999 - Farhan Dasyandra Larenzo
+5. C3352999 - Farhan Dasyandra Larenzo
+6. C3353000 – Juan Daniel Halomoan
 <br />
 <br />
 
@@ -28,12 +28,12 @@ that the application we create can help educate about culture in Indonesia.
 Project Scope
 1. Build dataset for Machine Learning classification object
 2. The web application will be written in HTML, CSS, and JavaScript
-3.The Android application will be written in Kotlin and built using Android Studio
-4.Deploy the machine learning model to Android and website applications
-5.The Android application will be written in Kotlin and built using Android Studio
-6.GCP used and create Virtual Machine and host application server
-7.make application desain, hosting application web and mobile
-8.creates a system interactive
+3. The Android application will be written in Kotlin and built using Android Studio
+4. Deploy the machine learning model to Android and website applications
+5. The Android application will be written in Kotlin and built using Android Studio
+6. GCP used and create Virtual Machine and host application server
+7. make application desain, hosting application web and mobile
+8. creates a system interactive
 
 FlowChart
 <br />
