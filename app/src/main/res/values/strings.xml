@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Budayaku</string>
     <string name="mulai_pencarian_budaya">Mulai pencarian budaya</string>
+    <string name="upload">Unggah gambar</string>
     <string name="unggah">Unggah</string>
     <string name="senjata_adat">Senjata Adat</string>
     <string name="pakaian_adat">Pakaian Adat</string>
