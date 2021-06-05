@@ -30,12 +30,11 @@ class UploadImageActivity : AppCompatActivity() {
         //camera
         binding.btnCamera.setOnClickListener {
             takePictureIntent()
-
         }
 
         val fileName = "label.txt"
         val inputString = application.assets.open(fileName).bufferedReader().use { it.readText() }
-        var townList = inputString.split("\n")
+        val townList = inputString.split("\n")
 
         binding.btnUpload.setOnClickListener {
             val intent = Intent(Intent.ACTION_GET_CONTENT)
@@ -46,7 +45,7 @@ class UploadImageActivity : AppCompatActivity() {
         binding.btnPredict.setOnClickListener {
 
             bitmap?.let {
-                var resize = Bitmap.createScaledBitmap(bitmap!!, 224, 224, true)
+                val resize = Bitmap.createScaledBitmap(bitmap!!, 224, 224, true)
 
                 val model = MobilenetV110224Quant.newInstance(this)
 
@@ -54,15 +53,15 @@ class UploadImageActivity : AppCompatActivity() {
                 val inputFeature0 =
                     TensorBuffer.createFixedSize(intArrayOf(1, 224, 224, 3), DataType.UINT8)
 
-                var tBuffer = TensorImage.fromBitmap(resize)
-                var byteBuffer = tBuffer.buffer
+                val tBuffer = TensorImage.fromBitmap(resize)
+                val byteBuffer = tBuffer.buffer
                 inputFeature0.loadBuffer(byteBuffer)
 
 // Runs model inference and gets result.
                 val outputs = model.process(inputFeature0)
                 val outputFeature0 = outputs.outputFeature0AsTensorBuffer
 
-                var max = getMax(outputFeature0.floatArray)
+                val max = getMax(outputFeature0.floatArray)
 
                 binding.tvResult.text = townList[max]
 

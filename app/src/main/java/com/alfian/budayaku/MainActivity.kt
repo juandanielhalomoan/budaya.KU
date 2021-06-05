@@ -15,8 +15,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-
         binding.btnRumahAdat.setOnClickListener {
             val intent = Intent(this, RumahAdatActivity::class.java)
             startActivity(intent)
