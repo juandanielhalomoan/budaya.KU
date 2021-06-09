@@ -58,7 +58,6 @@
             tools:text="Asal daerah" />
 
         <TextView
-            android:textColor="@color/black"
             android:id="@+id/tv_deskripsi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

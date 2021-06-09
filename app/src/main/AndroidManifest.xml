@@ -17,7 +17,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Budayaku">
-        <activity android:name=".AboutActivity"></activity>
+        <activity android:name=".SplashScreenActivity"
+            android:theme="@style/Theme.SplashScreen">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".AboutActivity" />
         <activity android:name=".ui.DetailFoodActivity" />
         <activity android:name=".ui.MakananKhasActivity" />
         <activity android:name=".ui.detail.DetailPakaianActivity" />
@@ -30,11 +40,7 @@
         <activity android:name=".ui.PakaianAdatActivity" />
         <activity android:name=".ui.RumahAdatActivity" />
         <activity android:name=".ui.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

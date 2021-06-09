@@ -8,7 +8,9 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
 import android.view.View
+import com.alfian.budayaku.R
 import com.alfian.budayaku.databinding.ActivityUploadImageBinding
+import com.alfian.budayaku.helper.DataBudaya
 import com.alfian.budayaku.ml.Budayaku
 import org.tensorflow.lite.DataType
 import org.tensorflow.lite.support.image.TensorImage
@@ -50,13 +52,13 @@ class UploadImageActivity : AppCompatActivity() {
 
                 val nilai = 360
 
-                val resize = Bitmap.createScaledBitmap(bitmap!!, nilai, nilai, true)
+                val resize = Bitmap.createScaledBitmap(bitmap!!, 180, 180, true)
 
                 val model = Budayaku.newInstance(this)
 
 // Creates inputs for reference.
                 val inputFeature0 =
-                    TensorBuffer.createFixedSize(intArrayOf(1, nilai, nilai, 3), DataType.UINT8)
+                    TensorBuffer.createFixedSize(intArrayOf(1, 180, 180, 3), DataType.UINT8)
 
                 val tBuffer = TensorImage.fromBitmap(resize)
                 val byteBuffer = tBuffer.buffer
@@ -70,6 +72,28 @@ class UploadImageActivity : AppCompatActivity() {
                 val max = getMax(outputFeature0.floatArray)
 
                 binding.tvResult.text = townList[max]
+
+                val hasil = townList[max]
+
+                Log.d("aan", "onCreate: max = $max")
+
+
+                when (max) {
+                    0 -> binding.tvDeskripsi.text = getString(R.string.Baileo)
+                    1 -> binding.tvDeskripsi.text = getString(R.string.Baloy_Mayo)
+                    2 -> binding.tvDeskripsi.text = getString(R.string.belah_bubung)
+                    3 -> binding.tvDeskripsi.text = getString(R.string.Bubungan_Lima)
+                    4 -> binding.tvDeskripsi.text = getString(R.string.Dulohupa)
+                    5 -> binding.tvDeskripsi.text = getString(R.string.Gapura_Candi_Bentar)
+                    6 -> binding.tvDeskripsi.text = getString(R.string.Honai)
+                    7 -> binding.tvDeskripsi.text = getString(R.string.Istana_Kesultanan_Kadariyah)
+                    8 -> binding.tvDeskripsi.text = getString(R.string.Jabu_Bolon)
+                    9 -> binding.tvDeskripsi.text = getString(R.string.Joglo)
+                    10 -> binding.tvDeskripsi.text = getString(R.string.Keraton_Kesepuhan_Cirebon)
+                    11 -> binding.tvDeskripsi.text = getString(R.string.Loka_Samawa)
+                    12 -> binding.tvDeskripsi.text = getString(R.string.Mod_Aki_Aksa)
+                }
+
 
 
 // Releases model resources if no longer used.

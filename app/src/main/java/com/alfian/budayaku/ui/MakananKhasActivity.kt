@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.alfian.budayaku.R
 import com.alfian.budayaku.database.ListFoodAdapter
@@ -16,10 +17,7 @@ import com.google.firebase.ktx.Firebase
 
 class MakananKhasActivity : AppCompatActivity() {
 
-    private var dataMakanan = arrayListOf<DataMakanan>(
-//        DataMakanan("asdnakjd ajdbnajdja", "httmodni", "jakarta", "bakso"),
-//        DataMakanan("wwwww rrnjdjkfsdkf", "htt sdsdj", "makassar", "gado - gado")
-    )
+    private var dataMakanan = arrayListOf<DataMakanan>()
 
     private lateinit var binding: ActivityMakananKhasBinding
 
@@ -29,15 +27,9 @@ class MakananKhasActivity : AppCompatActivity() {
         binding = ActivityMakananKhasBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.progressLayout.progressView.visibility = View.VISIBLE
 
         val db = Firebase.firestore
-
-//        // Create a new user with a first and last name
-//        val user = hashMapOf(
-//            "first" to "Ada",
-//            "last" to "Lovelace",
-//            "born" to 1815
-//        )
 
         db.collection("users")
 //            .whereEqualTo("pakaian", true)
@@ -45,22 +37,7 @@ class MakananKhasActivity : AppCompatActivity() {
             .get()
             .addOnSuccessListener { result ->
 
-
                 val temp = result.data
-
-
-
-
-
-//                val makanan = result.get("makanan")
-
-
-
-//                for (img in gambar) {
-//                    val dataku = DataMakanan()
-//                    dataku.gambar = img.toString()
-//                    dataMakanan.add(dataku)
-//                }
 
                 val makanan = temp?.getValue("nama_makanan") as ArrayList<*>
 
@@ -71,9 +48,7 @@ class MakananKhasActivity : AppCompatActivity() {
                 val daerah = temp.getValue("nama_daerah") as ArrayList<*>
 
                 for ( i in 0 until  makanan.size) {
-
                     val dataku = DataMakanan()
-
                     dataku.nama_makanan = makanan[i].toString()
                     dataku.nama_daerah = daerah[i].toString()
                     dataku.deskripsi = deskripsi[i].toString()
@@ -81,11 +56,11 @@ class MakananKhasActivity : AppCompatActivity() {
 
                     dataMakanan.add(dataku)
 
-
                 }
 
-                Log.d("abc", "datamakanan = $dataMakanan")
+
                 showRecyclerList()
+                binding.progressLayout.progressView.visibility = View.GONE
 
             }
             .addOnFailureListener { exception ->
