@@ -1,13 +1,13 @@
 Baileo
-Baloy_Mayo
-Belah_Bubung
-Bubungan_Lima
+Baloy Mayo
+Belah Bubung
+Bubungan Lima
 Dulohupa
-Gapura_Candi_Bentar
+Gapura Candi Bentar
 Honai
-Istana_Kesultanan_Kadariyah
-Jabu_Bolon
+Istana Kesultanan Kadariyah
+Jabu Bolon
 Joglo
-Keraton_Kesepuhan_Cirebon
-Loka_Samawa
-Mod_Aki_Aksa
+Keraton Kesepuhan Cirebon
+Loka Samawa
+Mod Aki Aksa

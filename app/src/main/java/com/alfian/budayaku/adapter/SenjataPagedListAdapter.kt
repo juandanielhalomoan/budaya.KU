@@ -21,8 +21,8 @@ class SenjataPagedListAdapter(private val activity: Activity) : PagedListAdapter
     inner class BudayaViewHolder (private val binding: ItemListBudayaBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(senjataEntity: SenjataEntity) {
             with(binding) {
-                tvNama.text = senjataEntity.namaSenjata
-                tvDaerah.text = senjataEntity.provinsiSenjata
+                tvNama.text = senjataEntity.provinsiSenjata
+                tvDaerah.text = senjataEntity.namaSenjata
                 tvDeskripsi.text = senjataEntity.descriptionSenjata
 
                 Glide.with(itemView.context)

@@ -1,46 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AboutActivity">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        android:layout_weight="1"
-        android:clickable="true"
-        android:focusable="true"
-        android:foreground="?android:attr/selectableItemBackground" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground" >
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:textSize="30sp"
-                android:text="Tentang Budayaku" />
-
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:textAlignment="center"
-                android:textSize="18sp"
-                android:text="@string/about_budayaku" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:textSize="30sp"
+                    android:text="Tentang Budayaku" />
 
-    </androidx.cardview.widget.CardView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:text="@string/about_budayaku" />
 
+                <TextView
+                    android:layout_marginTop="24dp"
+                    android:layout_width="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Aplikasi ini juga memiliki fitur klasifikasi rumah adat melalui gambar menjadi 13 class yaitu : Baileo, Baloy Mayo, Belah Bubung, Bubungan Lima, Dulohupa, Gapura Candi Bentar, Honai, Istana Kesultanan, Kadariyah, Jabu Bolon, Joglo, Keraton Kesepuhan Cirebon, Loka Samawa, Mod Aki Aksa" />
 
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Made By : \n\nThe Last Row Team \n\n A3262922 - Badria Mujki \n A3363002 – Alfian \n M0121217 - Carlo Anthony Balelang \n M0121218 - Rashad Abul Khayr \n C3352999 - Farhan Dasyandra Larenzo \n C3353000 – Juan Daniel Halomoan" />
 
+            </LinearLayout>
 
-</LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

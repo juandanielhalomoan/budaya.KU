@@ -7,6 +7,17 @@
     android:padding="8dp"
     tools:context=".ui.UploadImageActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Klasifikasi 13 jenis rumah adat"
+        android:padding="16dp"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_camera"
+        app:layout_constraintStart_toEndOf="@+id/btn_upload"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/btn_upload"
         android:layout_width="40dp"
@@ -48,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20sp"
         android:text="Choose Image"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:fontFamily="sans-serif-black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -59,21 +70,20 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintTop_toBottomOf="@+id/tv_result"
         app:layout_constraintBottom_toTopOf="@+id/btn_predict">
         <TextView
             android:id="@+id/tv_deskripsi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Deskripsi"
+            tools:text="Deskripsi"
             app:layout_constraintBottom_toTopOf="@+id/btn_predict"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_result" />
 
     </ScrollView>
-
-
 
     <ImageView
         android:id="@+id/iv_image_choose"
