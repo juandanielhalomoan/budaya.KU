@@ -108,7 +108,7 @@ plt.legend(loc='upper right')
 plt.title('Training and Validation Loss')
 plt.show()
 
-#Konversi model ke dalam TFLite
+#Konversi model ke dalam TFLite dan pengubahan Data Type dari float32 ke UINT8
 from tensorflow import lite
 def representative_data_gen():
   dataset_list = tf.data.Dataset.list_files('/content/Budayaku_dataset/*/*.jpg')
