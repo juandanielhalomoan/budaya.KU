@@ -2,6 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.alfian.budayaku">
 
+    <queries>
+
+        <!-- Camera -->
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,11 +17,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Budayaku">
-        <activity android:name=".UploadImageActivity" android:theme="@style/Theme.Detail" />
-        <activity android:name=".SenjataAdatActivity" />
-        <activity android:name=".PakaianAdatActivity" />
-        <activity android:name=".RumahAdatActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".AboutActivity"></activity>
+        <activity android:name=".ui.DetailFoodActivity" />
+        <activity android:name=".ui.MakananKhasActivity" />
+        <activity android:name=".ui.detail.DetailPakaianActivity" />
+        <activity android:name=".ui.detail.DetailRumahActivity" />
+        <activity android:name=".ui.detail.DetailSenjataActivity" />
+        <activity
+            android:name=".ui.UploadImageActivity"
+            android:theme="@style/Theme.Detail" />
+        <activity android:name=".ui.SenjataAdatActivity" />
+        <activity android:name=".ui.PakaianAdatActivity" />
+        <activity android:name=".ui.RumahAdatActivity" />
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,12 +37,5 @@
             </intent-filter>
         </activity>
     </application>
-
-    <queries>
-        <!-- Camera -->
-        <intent>
-            <action android:name="android.media.action.IMAGE_CAPTURE" />
-        </intent>
-    </queries>
 
 </manifest>

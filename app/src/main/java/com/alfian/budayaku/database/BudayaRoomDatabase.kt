@@ -27,7 +27,7 @@ abstract class BudayaRoomDatabase : RoomDatabase() {
                     )
                         .addCallback(object : Callback() {
                             override fun onCreate(db: SupportSQLiteDatabase) {
-                                add()
+                                addSenjata()
                                 addRumah()
                                 addPakaian()
                             }
@@ -38,7 +38,7 @@ abstract class BudayaRoomDatabase : RoomDatabase() {
             return INSTANCE as BudayaRoomDatabase
         }
 
-        fun add() {
+        fun addSenjata() {
             Executors.newSingleThreadExecutor().execute {
                 val list: MutableList<SenjataEntity> = ArrayList()
                 for (i in 0 until DataBudaya.dataSenjata.size) {

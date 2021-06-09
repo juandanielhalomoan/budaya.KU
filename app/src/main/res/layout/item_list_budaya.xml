@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    app:cardBackgroundColor="@color/item_color"
+    app:cardBackgroundColor="@color/white"
     app:cardUseCompatPadding="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -25,12 +25,12 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:background="@color/grey"
-            tools:ignore="ContentDescription"
-            android:layout_alignParentLeft="true" />
+            android:background="@color/white"
+            tools:ignore="ContentDescription" />
 
         <TextView
-            android:id="@+id/tv_title"
+            android:textColor="@color/black"
+            android:id="@+id/tv_nama"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -46,26 +46,28 @@
             tools:text="Nama Adat" />
 
         <TextView
-            android:id="@+id/tv_release"
+            android:textColor="@color/black"
+            android:id="@+id/tv_daerah"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:gravity="start"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/tv_title"
-            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            app:layout_constraintStart_toStartOf="@+id/tv_nama"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nama"
             tools:text="Asal daerah" />
 
         <TextView
-            android:id="@+id/tv_rating"
+            android:textColor="@color/black"
+            android:id="@+id/tv_deskripsi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:maxLines="1"
             android:ellipsize="end"
             android:gravity="start"
-            app:layout_constraintStart_toStartOf="@+id/tv_title"
-            app:layout_constraintTop_toBottomOf="@+id/tv_release"
+            app:layout_constraintStart_toStartOf="@+id/tv_daerah"
+            app:layout_constraintTop_toBottomOf="@+id/tv_daerah"
             tools:text="Description..." />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

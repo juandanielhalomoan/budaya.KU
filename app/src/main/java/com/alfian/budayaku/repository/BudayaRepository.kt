@@ -30,8 +30,16 @@ class BudayaRepository(application: Application) {
         return budaya.getAllPakaian()
     }
 
-    fun searchItem(sort: String): DataSource.Factory<Int, SenjataEntity> {
-        return budaya.searchItem(sort)
+    fun searchSenjata(query: String): DataSource.Factory<Int, SenjataEntity> {
+        return budaya.searchSenjata(query)
+    }
+
+    fun searchRumah(query: String): DataSource.Factory<Int, RumahEntity> {
+        return budaya.searchRumah(query)
+    }
+
+    fun searchPakaian(query: String): DataSource.Factory<Int, PakaianEntity> {
+        return budaya.searchPakaian(query)
     }
 
 }

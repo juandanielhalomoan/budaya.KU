@@ -7,4 +7,10 @@
     <string name="pakaian_adat">Pakaian Adat</string>
     <string name="rumah_adat">Rumah Adat</string>
     <string name="budayaku">Budayaku</string>
+    <string name="image_detail">image detail</string>
+    <string name="nama_adat">Nama Adat</string>
+    <string name="description">description</string>
+    <string name="makanan_khas">Makanan Khas</string>
+    <string name="about">About</string>
+    <string name="pencarian_makanan_khas">Pencarian Makanan Khas</string>
 </resources>

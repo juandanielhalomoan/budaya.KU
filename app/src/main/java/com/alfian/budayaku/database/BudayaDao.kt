@@ -1,5 +1,6 @@
 package com.alfian.budayaku.database
 
+import androidx.lifecycle.LiveData
 import androidx.paging.DataSource
 import androidx.room.*
 import androidx.sqlite.db.SupportSQLiteQuery
@@ -29,6 +30,14 @@ interface BudayaDao {
 
     //tambahkan fungsi search
     @Query("SELECT * FROM SenjataEntity WHERE province LIKE '%' || :search || '%'")
-    fun searchItem(search: String?): DataSource.Factory<Int, SenjataEntity>
+    fun searchSenjata(search: String?): DataSource.Factory<Int, SenjataEntity>
+
+    //tambahkan fungsi search
+    @Query("SELECT * FROM rumahentity WHERE province LIKE '%' || :search || '%'")
+    fun searchRumah(search: String?): DataSource.Factory<Int, RumahEntity>
+
+    //tambahkan fungsi search
+    @Query("SELECT * FROM pakaianentity WHERE province LIKE '%' || :search || '%'")
+    fun searchPakaian(search: String?): DataSource.Factory<Int, PakaianEntity>
     
 }

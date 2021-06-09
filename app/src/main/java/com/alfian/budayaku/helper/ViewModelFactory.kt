@@ -3,9 +3,9 @@ package com.alfian.budayaku.helper
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.alfian.budayaku.ui.SenjataViewModel
-import com.alfian.budayaku.ui.PakaianViewModel
-import com.alfian.budayaku.ui.RumahViewModel
+import com.alfian.budayaku.ui.viewmodel.SenjataViewModel
+import com.alfian.budayaku.ui.viewmodel.PakaianViewModel
+import com.alfian.budayaku.ui.viewmodel.RumahViewModel
 
 class ViewModelFactory private constructor(private val mApplication: Application) : ViewModelProvider.NewInstanceFactory() {
 
